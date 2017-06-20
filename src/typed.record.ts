@@ -34,9 +34,9 @@ import {
 export interface TypedRecord<T extends TypedRecord<T>>
   extends Map<string, any> {
 
-  set: (prop: string, val: any) => T;
-  delete: (key: string) => T;
-  remove: (key: string) => T;
+  set: <K extends keyof T>(prop: K, val: any) => T;
+  delete: <K extends keyof T>(key: K) => T;
+  remove: <K extends keyof T>(key: K) => T;
   clear: () => T;
   update: {
     (updater: (value: T) => any): T;
