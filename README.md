@@ -36,8 +36,8 @@ This is half of everything you need to do. The only important thing to note is t
 
 ```typescript
 interface IAnimal {
-  type: string;
-  age: number;
+  readonly type: string;
+  readonly age: number;
 }  
 ```
  
